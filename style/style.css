@@ -1,0 +1,84 @@
+.min-hight{
+    min-height: 50vh;
+}
+/* Dodatne klase za velicinu fonta koje ce da zamene vec definisane font-size klase u Bootstrap-u koriscenjem !important*/
+.fs-1{
+    font-size: 3rem !important;
+}
+.fs-2{
+    font-size: 2rem !important;
+}
+.fs-3{
+    font-size: 1.5rem !important;
+}
+.fs-4{
+    font-size: 1.1rem !important;
+}
+.fs-5{
+    font-size: 0.9rem !important;
+}
+
+.hero{
+    height: 13rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("../Images/pexels-photo-1640774.jpeg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+.hero-bottom{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(52,58,64, 1)), url("../Images/pexels-photo-1640774.jpeg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+
+img.rounded-circle{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Pretraga */
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 30px;
+    background-color: black;
+    border-radius: 15px;
+    padding: 5px;
+    }
+
+    .search_input{
+    color: white ;
+    border: 0;
+    outline: 0;
+    background-color:transparent;
+    width: 0;
+    caret-color:transparent;
+    line-height: 19px;
+    transition: width 0.4s linear;
+    transition-delay: 2s;
+    }
+  
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 200px;
+    caret-color:#a57b21;
+    transition: width 0.4s linear;
+    }
+
+    .search_icon{
+    height: 20px !important;
+    width: 20px !important;
+    float: right !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 50% !important;
+   color: white !important;
+    text-decoration: none !important;
+    }
