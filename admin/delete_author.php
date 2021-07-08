@@ -15,14 +15,13 @@ if(!isset($_GET['id'])){
      if($_SESSION['Role']=="admin" || $_SESSION['id']==$_GET['id']){
              $id = $_GET['id'];
             $result = $autor->getAuthorById($id);
+            $red=mysqli_fetch_assoc($result);
+            $image=$red['Image'];
             if(mysqli_num_rows($result)<=0){
                 header("Location: all_authors.php?message=There is no author with the given id");
                 exit();
             }
 
-            while($red = mysqli_fetch_assoc($result)){
-                $image=$red['Image'];
-                }
             if($autor->deleteAuthor($id)){
                 unlink(ROOT ."/". $image);
                 if( $_SESSION['id']==$_GET['id']){

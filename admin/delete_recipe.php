@@ -14,18 +14,16 @@ if(!isset($_GET['id'])){
         $result = $recipe->getRecipeById($id);
         $red=mysqli_fetch_assoc($result);
         $idAutoraRecepta=$red['AuthorId'];
-
+        $image=$red['Image'];
      if($_SESSION['Role']=="admin" || $_SESSION['id']==$idAutoraRecepta){
              
             if(mysqli_num_rows($result)<=0){
                 header("Location: my_recipes.php?message=NoFile");
                 exit();
             }
-            while($red = mysqli_fetch_assoc($result)){
-            $image=$red['Image'];
-            }
+            
             if($recipe->deleteRecipe($id)){
-                unlink(ROOT ."/". $image);
+                unlink(realpath(ROOT ."/". $image));
                 if(isset($_GET['lista'])){
                     header("Location: all_recipes_list.php?message=Successfully deleted+");
                     exit();
