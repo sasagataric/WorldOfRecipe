@@ -1,4 +1,4 @@
-# WorldOfRecipe
+# WorldOfRecipes
 <a href="http://svetrecepata.tk/">www.svetrecepata.tk<a>
 <p align="start">
   A website where, after creating an account, users can post their own kitchen recipes, as well as view other users recipes.
