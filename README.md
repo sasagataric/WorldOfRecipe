@@ -5,7 +5,7 @@
 </p>
 
 
-# Technology
+# Technologys
 <ul>
 <li>PHP</li>
 <li>JavaScript</li>
